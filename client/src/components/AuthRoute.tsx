@@ -8,5 +8,5 @@ interface AutheRouteProps {
 export const AuthRoute = ({ children }: AutheRouteProps): JSX.Element => {
   const { isAuth } = useAppSelector((state) => state.user);
 
-  return !isAuth ? children : <Navigate to='/home' replace />;
+  return !isAuth ? children : <Navigate to='/' replace />;
 };

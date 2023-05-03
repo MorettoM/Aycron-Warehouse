@@ -24,12 +24,13 @@ export function validateLoginInput(input: Pick<UserDocument, "username" | "passw
 }
 
 export function validateRegisterInput(
-  input: Pick<UserDocument, "username" | "email" | "password">
+  input: Pick<UserDocument, "username" | "email" | "password" | "isAdmin">
 ) {
   const schema = Joi.object({
     username: Joi.string().min(3).max(50).required(),
     password: Joi.string().min(5).max(255).required(),
     email: Joi.string().min(5).max(255).required().email(),
+    isAdmin: Joi.boolean()
   });
 
   return schema.validate(input);

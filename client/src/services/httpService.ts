@@ -1,3 +1,4 @@
+import { notification } from "antd";
 import axios from "axios";
 
 const axiosInstance = axios.create({
@@ -6,8 +7,19 @@ const axiosInstance = axios.create({
 });
 
 axiosInstance.interceptors.response.use(
-  (res) => res,
+  (res) => {
+    if (res.data.message){
+    notification.success({
+      message: res.data.message
+    })}
+    return res
+  },
   (error) => {
+    if (error.response.data.message){
+    notification.error({
+      message: error.response.data.message,
+      placement: "topRight"
+    })}
     return Promise.reject(error);
   }
 );

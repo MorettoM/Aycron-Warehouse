@@ -9,7 +9,7 @@ export default function LogoutPage() {
 
   useEffect(() => {
     dispatch(attemptLogout(navigate));
-    navigate("/home", { replace: true });
+    navigate("/", { replace: true });
   }, [dispatch, navigate]);
 
   return <p>Logout in progress</p>;

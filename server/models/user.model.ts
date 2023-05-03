@@ -9,7 +9,6 @@ export interface UserDocument extends Document {
   password: string;
   passwordResetToken: string;
   passwordResetExpires: Date;
-  isVerified: boolean;
   isAdmin: boolean;
   expires?: Date;
 
@@ -40,11 +39,6 @@ const userSchema = new Schema<UserDocument>({
   },
   passwordResetToken: { type: String, default: "" },
   passwordResetExpires: { type: Date, default: dayjs().toDate() },
-  isVerified: {
-    type: Boolean,
-    required: true,
-    default: false,
-  },
   isAdmin: {
     type: Boolean,
     default: false,

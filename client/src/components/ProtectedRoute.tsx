@@ -7,6 +7,5 @@ interface ProtectedRouteProps {
 
 export default function ProtectedRoute({ children }: ProtectedRouteProps): JSX.Element {
   const { isAuth } = useAppSelector((state) => state.user);
-
   return isAuth ? children : <Navigate to='/login' replace />;
 }

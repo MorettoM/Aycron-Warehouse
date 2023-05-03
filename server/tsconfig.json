@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "build",
-    "module": "commonjs",
+    "module": "CommonJS",
     "sourceMap": true,
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
@@ -27,7 +27,7 @@
       "@routes/*": ["./routes/*"],
       "@validations/*": ["./validations/*"],
       "@startup/*": ["./startup/*"]
-    }
+    },
   },
   "exclude": ["node_modules", "build"]
 }

@@ -18,7 +18,6 @@
     "noImplicitAny": true,
     "importHelpers": true,
     "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -40,6 +39,8 @@
     "src/setupTests.ts"
   ],
   "include": [
-    "src"
+    "src",
+    "./**/*.ts",
+    "./**/*.tsx"
   ]
 }

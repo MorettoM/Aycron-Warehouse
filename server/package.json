@@ -1,11 +1,14 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "Server for MERN auth",
+  "description": "Server for Aycron Warehouses",
   "private": true,
-  "author": "Flavien Rebattet",
+  "author": "Marcos Moretto",
   "license": "MIT",
   "main": "index.js",
+  "engines": {
+    "node": "16.16.0"
+  },
   "scripts": {
     "build": "tsc-alias --project tsconfig.json",
     "dev": "ts-node-dev --respawn -r tsconfig-paths/register index.ts",
@@ -14,7 +17,9 @@
     "ci": "yarn install --frozen-lockfile"
   },
   "dependencies": {
-    "@sendgrid/mail": "^7.7.0",
+    "@types/mongoose": "^5.11.97",
+    "@types/node-fetch": "^2.6.3",
+    "@types/polyline": "^0.1.29",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",
     "compression": "^1.7.4",
@@ -32,8 +37,11 @@
     "moment": "^2.29.1",
     "mongo-sanitize": "^1.1.0",
     "mongoose": "^6.5.2",
+    "node-fetch": "2.6.1",
+    "openrouteservice-js": "^0.3.0",
     "passport": "0.4.1",
     "passport-local": "^1.0.0",
+    "polyline": "^0.2.0",
     "ramda": "^0.28.0",
     "winston": "^3.8.1"
   },
